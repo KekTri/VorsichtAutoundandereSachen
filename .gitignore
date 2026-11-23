@@ -1,0 +1,4 @@
+.venv/
+
+# IDE
+.idea/
