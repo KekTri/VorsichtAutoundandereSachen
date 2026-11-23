@@ -7,7 +7,9 @@ authors = [
     { name = "Robbie Sumner", email = "robbiecsumner@gmail.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "fiftyone>=1.22.1",
+]
 
 [project.scripts]
 vorsichtauto = "vorsichtauto:main"
