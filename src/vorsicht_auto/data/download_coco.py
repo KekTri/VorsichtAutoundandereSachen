@@ -1,5 +1,3 @@
-import os
-import shutil
 import fiftyone as fo
 import fiftyone.zoo as foz
 
@@ -10,11 +8,15 @@ TRAFFIC_CLASSES = [
 ]
 fo.config.dataset_zoo_dir = "data/raw"
 
-dataset = foz.load_zoo_dataset(
-    "coco-2017",
-    label_types=["detections"],
-    classes=TRAFFIC_CLASSES,
-    max_samples=100,
-)
+def main() -> None:
+    foz.load_zoo_dataset(
+        "coco-2017",
+        label_types=["detections"],
+        classes=TRAFFIC_CLASSES,
+        max_samples=100,
+    )
 
-print("Dataset downloaded to", fo.config.dataset_zoo_dir)
+    print("Dataset downloaded to", fo.config.dataset_zoo_dir)
+
+if __name__ == "__main__":
+    main()
